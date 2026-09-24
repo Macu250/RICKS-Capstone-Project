@@ -1,0 +1,10 @@
+page:
+  tilte: "Flexibility"
+  description: "different video playlists with flexibility videos."
+
+resources:
+# Repeat format as needed for as many resources you have.
+  - title: ""
+    description: ""
+    type: "youtube"
+    url: ""
