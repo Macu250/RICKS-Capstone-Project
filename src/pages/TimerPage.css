@@ -1,0 +1,55 @@
+/* styles for the countdown timer */
+
+.timer-card {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Preset buttons ---------- */
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.preset-button {
+  background: transparent;
+  border: 1px solid var(--sage);
+  border-radius: 999px;
+  padding: 6px 14px;
+  color: var(--sage);
+  transition: background 0.3s, color 0.3s;
+}
+
+.preset-button:hover {
+  background: var(--sage-light);
+}
+
+.preset-button.active {
+  background: var(--sage-dark);
+  color: white;
+}
+
+/* ---------- Time display ---------- */
+.timer-text {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  color: var(--heading);
+  margin-bottom: 20px;
+}
+
+.finished-message {
+  color: var(--sage);
+  font-weight: 600;
+}
+
+/* ---------- Start / reset buttons ---------- */
+.timer-controls {
+  display: flex;
+  gap: 12px;
+}

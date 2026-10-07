@@ -1,0 +1,19 @@
+/* Styles the lesson cards */
+
+.lesson-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.lesson-number {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--sage);
+  margin-bottom: 6px;
+}
+
+.lesson-card h3 {
+  margin: 0;
+}

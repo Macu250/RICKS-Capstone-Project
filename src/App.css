@@ -1,26 +1,95 @@
-#root {
-  width: 100%;
-}
+/*
+  Layout styles shared by every page
+*/
 
+/* ---------- Main app layout ---------- */
 .app {
-  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
 }
 
-header {
-  padding: 20px;
+.app-header {
+  text-align: center;
+  padding: 30px 0 10px;
 }
 
-nav {
-  display: flex;
-  gap: 10px;
-  padding: 0 20px 20px;
+.app-title {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
 }
 
-nav button {
-  padding: 10px 16px;
-  cursor: pointer;
+.app-subtitle {
+  color: var(--text-light);
+  font-style: italic;
 }
 
-main {
-  padding: 20px;
+.page-content {
+  margin-top: 30px;
+}
+
+/* ---------- Page headings ---------- */
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-header p {
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+  background: var(--sage-dark);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 24px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background: var(--sage);
+  color: var(--bg-bottom);
+  transform: translateY(-1px);
+}
+
+.button-soft {
+  background: var(--sage-light);
+  color: var(--text);
+}
+
+.button-soft:hover {
+  background: var(--sage-dark);
+  color: white;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
 }
