@@ -1,5 +1,4 @@
-// Breathing exercise page. This is a first draft: the circle does not
-// animate yet. The button only switches between "Begin" and "Stop".
+// The circle does not animate yet. The button only switches between "Begin" and "Stop".
 
 import { useState } from 'react'
 import './MeditationPage.css'
@@ -24,12 +23,14 @@ function MeditationPage() {
       </div>
 
       <section className="card breathing-area">
+        {/*
         <div className="circle-holder">
           <div className="breath-ring"></div>
           <div className="breath-circle">
             <span>Ready</span>
           </div>
         </div>
+        */}
 
         <button className="button" onClick={handleButtonClick}>
           {buttonText}

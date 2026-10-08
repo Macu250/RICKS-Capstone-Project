@@ -15,7 +15,7 @@ import GoalsPage from './pages/GoalsPage'
 import TimerPage from './pages/TimerPage'
 
 function App() {
-  // Which tab is currently open. The app starts on the home page.
+  // Which tab is currently open. Starts on the home page.
   const [activeTab, setActiveTab] = useState('home')
 
   // Pick which page to show based on the active tab

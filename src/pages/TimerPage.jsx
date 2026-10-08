@@ -21,7 +21,7 @@ function TimerPage() {
   const [secondsLeft, setSecondsLeft] = useState(5 * 60)
   const [isRunning, setIsRunning] = useState(false)
 
-  // While the timer is running take one second off every second
+  // While the timer is running we will take one second off every second
   useEffect(() => {
     if (!isRunning) {
       return

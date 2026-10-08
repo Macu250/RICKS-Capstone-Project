@@ -1,5 +1,5 @@
-// The row of tab buttons at the top of the app.
-// It gets the current tab and a function to change tabs from App.jsx.
+// The row of tab buttons at the top of the app
+// It gets the current tab and a function to change tabs from App.jsx
 
 import tabs from '../data/tabs'
 import './NavBar.css'
