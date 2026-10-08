@@ -1,4 +1,4 @@
-// The welcome screen. Shows a greeting and a card for each feature.
+// The welcome screen
 // Clicking a card opens that tab.
 
 import tabs from '../data/tabs'
