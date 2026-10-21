@@ -21,7 +21,7 @@ function TimerPage() {
   const [secondsLeft, setSecondsLeft] = useState(5 * 60)
   const [isRunning, setIsRunning] = useState(false)
 
-  // While the timer is running we will take one second off every second
+  // While the timer is running will take one second off every second
   useEffect(() => {
     if (!isRunning) {
       return
@@ -59,8 +59,6 @@ function TimerPage() {
     setSecondsLeft(totalSeconds)
   }
 
-  const isFinished = secondsLeft === 0
-
   let startButtonText = 'Start'
   if (isRunning) {
     startButtonText = 'Pause'
@@ -70,7 +68,6 @@ function TimerPage() {
     <div>
       <div className="page-header">
         <h2>Timer</h2>
-        <p></p>
       </div>
 
       <section className="card timer-card">
@@ -96,10 +93,6 @@ function TimerPage() {
 
         {/* Time left */}
         <div className="timer-text">{formatTime(secondsLeft)}</div>
-
-        {isFinished && (
-          <p className="finished-message">Time is up. Nicely done. 🌿</p>
-        )}
 
         {/* Controls */}
         <div className="timer-controls">

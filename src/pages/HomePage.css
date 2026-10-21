@@ -12,7 +12,7 @@
   color: var(--text-light);
 }
 
-/* Each feature card is a button so it can be clicked */
+/* Each card is a button so it can be clicked */
 .feature-card {
   text-align: center;
   font: inherit;

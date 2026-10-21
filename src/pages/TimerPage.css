@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-/* ---------- Preset buttons ---------- */
+/* Preset buttons*/
 .preset-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -41,11 +41,6 @@
   font-size: 4.5rem;
   color: var(--heading);
   margin-bottom: 20px;
-}
-
-.finished-message {
-  color: var(--sage);
-  font-weight: 600;
 }
 
 /* ---------- Start / reset buttons ---------- */

@@ -1,13 +1,13 @@
 /*
-  Global theme for the whole app
-  colors, fonts, and the background.
-  Every other CSS file uses these colors
+  Theme for the whole app
+  Colors fonts and background.
+  The CSS files uses these colors
 */
 
-/* ---------- Fonts ---------- */
+/* Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Nunito:wght@300;400;600&display=swap');
 
-/* ---------- Color palette (greens and calm colors) ---------- */
+/* Color palette greens and calm colors*/
 :root {
   --bg-top: #33433a;
   --bg-bottom: #1f2924;
@@ -15,9 +15,6 @@
   --sage: #9db89d;
   --sage-dark: #5e7f63;
   --sage-light: #3d5143;
-  --stone: #46544b;
-  --clay: #d1a483;
-  --sky: #5f8590;
 
   --text: #dde3d8;
   --text-light: #a9b5a8;
@@ -36,7 +33,7 @@
   color-scheme: dark;
 }
 
-/* ---------- Base page styles ---------- */
+/* Base page styles */
 * {
   box-sizing: border-box;
 }
@@ -81,9 +78,4 @@ button {
   font-family: var(--font-body);
   font-size: 1rem;
   cursor: pointer;
-}
-
-input {
-  font-family: var(--font-body);
-  font-size: 1rem;
 }
