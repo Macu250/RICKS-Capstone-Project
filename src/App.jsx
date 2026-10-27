@@ -1,24 +1,41 @@
 import './App.css'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+
+import Home from './pages/Home'
+import Help from './pages/Help'
+import Education from './pages/Education'
+import Meditation from './pages/Meditation'
+import Flexibility from './pages/Flexibility'
+import Goals from './pages/Goals'
+import Timer from './pages/Timer'
 
 function App() {
   return (
-    <div className="app">
-      <header>
-        <h1>Pain Management</h1>
-      </header>
+    <BrowserRouter>
+      <div className="app">
 
-      <nav>
-        <button>Dashboard</button>
-        <button>Pain Log</button>
-        <button>History</button>
-        <button>Medication</button>
-      </nav>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/help">Help</Link>
+          <Link to="/education">Education</Link>
+          <Link to="/meditation">Meditation</Link>
+          <Link to="/flexibility">Flexibility</Link>
+          <Link to="/goals">Goals</Link>
+          <Link to="/timer">Timer</Link>
+        </nav>
 
-      <main>
-        <h2>Dashboard</h2>
-        <p>Welcome to your pain management dashboard.</p>
-      </main>
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/meditation" element={<Meditation />} />
+          <Route path="/flexibility" element={<Flexibility />} />
+          <Route path="/goals" element={<Goals />} />
+          <Route path="/timer" element={<Timer />} />
+        </Routes>
+
+      </div>
+    </BrowserRouter>
   )
 }
 

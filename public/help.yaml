@@ -1,0 +1,10 @@
+page:
+  tilte: "Help!"
+  description: "Helpful Resources for a pain flare-up."
+
+resources:
+# Repeat format as needed for as many resources you have.
+  - title: ""
+    description: ""
+    type: "youtube"
+    url: ""
