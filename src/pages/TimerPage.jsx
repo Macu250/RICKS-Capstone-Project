@@ -1,6 +1,6 @@
 // A countdown timer with preset times.
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './TimerPage.css'
 
 const presetMinutes = [1, 3, 5, 10, 15, 20]
@@ -20,6 +20,8 @@ function TimerPage() {
   const [totalSeconds, setTotalSeconds] = useState(5 * 60)
   const [secondsLeft, setSecondsLeft] = useState(5 * 60)
   const [isRunning, setIsRunning] = useState(false)
+  const backgroundMusic = useRef(null)
+  const [volume, setVolume] = useState(0.5)
 
   // While the timer is running will take one second off every second
   useEffect(() => {
@@ -38,6 +40,29 @@ function TimerPage() {
 
     return () => clearTimeout(timeoutId)
   }, [isRunning, secondsLeft])
+
+  // While the timer is running will play music
+
+  useEffect(() => {
+  if (!backgroundMusic.current) {
+      return
+  }
+  if (isRunning) {
+    backgroundMusic.current.play().catch((error) => {
+      console.log('backgroundMusic broke: ', error)
+    })
+  } else {
+    backgroundMusic.current.pause()
+  }
+  }, [isRunning])
+
+  // Volume controls for music
+
+  useEffect(() => {
+    if (backgroundMusic.current) {
+        backgroundMusic.current.volume = volume
+    }
+  }, [volume])
 
   function handlePresetClick(minutes) {
     const seconds = minutes * 60
@@ -69,6 +94,13 @@ function TimerPage() {
       <div className="page-header">
         <h2>Timer</h2>
       </div>
+
+      {/* Background music */}
+    <audio
+      ref={backgroundMusic}
+      src="/04-Meydan-Surreal-Forest(chosic.com).mp3"
+      loop
+    />
 
       <section className="card timer-card">
         {/* Preset time buttons */}
@@ -103,6 +135,19 @@ function TimerPage() {
             Reset
           </button>
         </div>
+        <div className="music-controls">
+  <label htmlFor="music-volume">Music Volume</label>
+
+  <input
+    id="music-volume"
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    value={volume}
+    onChange={(e) => setVolume(Number(e.target.value))}
+  />
+</div>
       </section>
     </div>
   )
