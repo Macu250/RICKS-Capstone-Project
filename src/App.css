@@ -57,6 +57,12 @@
   gap: 20px;
 }
 
+.help-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
 /* ---------- Buttons ---------- */
 .button {
   background: var(--sage-dark);
