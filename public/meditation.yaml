@@ -1,10 +1,12 @@
 page:
-  tilte: "Meditation"
-  description: "guided meditations and other calming videos."
+  title: "Meditation"
+  description: "Guided meditations and other calming videos."
 
 resources:
-# Repeat format as needed for as many resources you have.
-  - title: ""
-    description: ""
+# Repeat format as needed for as many videos you have.
+# Use YouTube video embed URLs: https://www.youtube.com/embed/VIDEO_ID
+# (VIDEO_ID is the part after "v=" in the video's normal YouTube link)
+  - title: "Gentle Yoga for Chronic Pain"
+    description: "Placeholder video until we pick meditation videos."
     type: "youtube"
-    url: ""
+    url: "https://www.youtube.com/embed/O5-TnW8WQmY"
