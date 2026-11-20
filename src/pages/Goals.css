@@ -1,0 +1,274 @@
+.goals-page {
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  color: #e7e9ed;
+  text-align: left;
+  background: #172128;
+  min-height: calc(100vh - 90px);
+}
+
+/* Page heading */
+.goals-heading {
+  margin-bottom: 30px;
+}
+
+.goals-eyebrow {
+  color: #9bcbb7;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.goals-heading h1 {
+  color: #f3f5f4;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 8px 0 12px;
+}
+
+.goals-heading p,
+.goals-hint,
+.goals-privacy {
+  color: #aeb9bf;
+  line-height: 1.6;
+}
+
+/* Add goal form and tracker container */
+.goals-add,
+.goals-tracker {
+  background: #202a32;
+  border: 1px solid #35424b;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.goals-add label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.goals-add-row {
+  display: flex;
+  gap: 12px;
+}
+
+.goals-add input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border-radius: 10px;
+  border: 1px solid #53616a;
+  background: #151d24;
+  color: white;
+  font: inherit;
+}
+
+.goals-add-row button {
+  background: #8ecbb2;
+  color: #12221c;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.goals-add-row button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Weekly tracker heading */
+.goals-tracker-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.goals-tracker-top h2 {
+  color: #f3f5f4;
+  margin: 0;
+}
+
+.goals-tracker-top > span {
+  color: #b9c7cb;
+  font-size: 0.9rem;
+}
+
+/* Clear All button */
+.goals-clear {
+  background: transparent;
+  color: #e5b1b5;
+  border: 1px solid #85545a;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.goals-clear:hover {
+  background: #4a3038;
+  color: white;
+}
+
+.goals-clear:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Goals table */
+.goals-table-scroll {
+  overflow-x: auto;
+}
+
+.goals-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: separate;
+  border-spacing: 5px 9px;
+}
+
+.goals-table th,
+.goals-table td {
+  padding: 0;
+  text-align: center;
+}
+
+.goals-table thead th {
+  color: #b6c5cb;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+.goals-table thead th:first-child {
+  text-align: left;
+  min-width: 150px;
+  width: 30%;
+}
+
+.goals-table thead th span,
+.goals-table thead th strong {
+  display: block;
+}
+
+.goals-table thead th strong {
+  color: #f1f4f5;
+  font-size: 1rem;
+  margin-top: 3px;
+}
+
+/* Goal names and delete button */
+.goals-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-right: 10px;
+  overflow-wrap: anywhere;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.goals-delete {
+  background: transparent;
+  color: #b8c5ca;
+  border: 0;
+  font-size: 1.35rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.goals-delete:hover {
+  background: #4a3038;
+  color: white;
+}
+
+/* Goal tracking cells */
+.goals-cell {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-width: 42px;
+  height: 46px;
+  border-radius: 9px;
+  border: 1px solid #495864;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: background 0.15s ease;
+}
+
+/* Default gray cell */
+.goals-cell--empty {
+  background: #343f4a;
+  color: white;
+}
+
+/* Completed goal: green with white checkmark */
+.goals-cell--done {
+  background: #238453;
+  border-color: #238453;
+  color: #ffffff;
+}
+
+/* Missed goal: red with white X */
+.goals-cell--missed {
+  background: #b64049;
+  border-color: #b64049;
+  color: #ffffff;
+}
+
+/* Keyboard accessibility */
+.goals-cell:focus-visible,
+.goals-delete:focus-visible,
+.goals-clear:focus-visible,
+.goals-add button:focus-visible,
+.goals-add input:focus-visible {
+  outline: 3px solid #c6e8dc;
+  outline-offset: 2px;
+}
+
+/* Additional text */
+.goals-empty {
+  color: #b7c5c9;
+  padding: 14px 0;
+}
+
+.goals-hint {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.goals-privacy {
+  font-size: 0.78rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 560px) {
+  .goals-page {
+    padding: 24px 12px 48px;
+  }
+
+  .goals-add,
+  .goals-tracker {
+    padding: 16px 12px;
+  }
+
+  .goals-add-row {
+    flex-direction: column;
+  }
+
+  .goals-add-row button {
+    width: 100%;
+  }
+}
