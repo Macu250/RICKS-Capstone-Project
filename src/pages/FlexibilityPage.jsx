@@ -1,5 +1,5 @@
-// Shows a list of stretching playlists from flexibility.yaml.
-// Clicking a playlist plays it. The Back button returns to the list.
+// Shows a list of stretching playlists from flexibility.yaml
+// Clicking a playlist plays it. The Back button returns to the list
 
 import { useEffect, useState } from 'react'
 import loadYaml from '../data/loadYaml'
@@ -9,7 +9,7 @@ function FlexibilityPage() {
   const [heading, setHeading] = useState({})
   const [playlists, setPlaylists] = useState([])
 
-  // The playlist the user clicked on. Empty means show the list.
+  // The playlist the user clicked on, empty means show the list
   const [selectedPlaylist, setSelectedPlaylist] = useState(null)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function FlexibilityPage() {
     loadFlexibility()
   }, [])
 
-  // If a playlist was clicked, show the video player for it
+  // If a playlist was clicked, we show the video player for it
   if (selectedPlaylist) {
     return (
       <div>
@@ -46,7 +46,7 @@ function FlexibilityPage() {
             className="help-video"
             src={selectedPlaylist.url}
             title={selectedPlaylist.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             allowFullScreen
           />
         </div>
