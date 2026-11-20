@@ -1,0 +1,14 @@
+
+page:
+  title: "About"
+  description: "Learn more about the Pain Management app."
+
+sections:
+  - title: "Our Purpose"
+    description: "This app was created to help people living with chronic pain by providing helpful resources and tools they can use in their daily lives."
+
+  - title: "What We Offer"
+    description: "The app includes educational information, meditation, flexibility exercises, personal goals, and a timer to help users manage their daily activities."
+
+  - title: "Our Goal"
+    description: "Our goal is to make pain management resources easier to access and give users a simple place to find information and activities that may help them."
