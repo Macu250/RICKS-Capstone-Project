@@ -1,0 +1,23 @@
+
+page:
+  title: "Privacy"
+  description: "Learn how the Pain Management app handles and protects user information."
+
+sections:
+  - title: "Information We Collect"
+    description: "The app may collect basic information such as your name, email address, personal goals, and activity preferences. This information helps provide a more personalized experience."
+
+  - title: "How We Use Your Information"
+    description: "Information entered into the app is used to help users track their goals, access resources, and manage their daily activities. We do not use this information for advertising purposes."
+
+  - title: "Data Storage and Security"
+    description: "User information is stored in a secure database with access limited to authorized users. We use security measures to help protect personal information from unauthorized access."
+
+  - title: "Sharing Your Information"
+    description: "We do not sell or share personal information with outside companies. Information is only used to support the features provided within the app."
+
+  - title: "Your Privacy Choices"
+    description: "Users can request changes to their personal information or ask for their information to be removed by contacting our support team."
+
+  - title: "Privacy Questions"
+    description: "If you have questions about how your information is handled, please contact our team at privacy@ricks.example.com."

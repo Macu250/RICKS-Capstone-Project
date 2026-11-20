@@ -1,11 +1,14 @@
-// Main component. 
-// Remembers which tab is open
-// Shows the page that is selected under the navigation bar.
+
+ // Main component.
+ // Remembers which tab is open
+ // Shows the page that is selected under the navigation bar.
 
 import { useState } from 'react'
 import './App.css'
 
 import NavBar from './components/NavBar'
+import InfoMenu from './components/InfoMenu'
+
 import HomePage from './pages/HomePage'
 import HelpPage from './pages/HelpPage'
 import EducationPage from './pages/EducationPage'
@@ -13,6 +16,10 @@ import MeditationPage from './pages/MeditationPage'
 import FlexibilityPage from './pages/FlexibilityPage'
 import GoalsPage from './pages/GoalsPage'
 import TimerPage from './pages/TimerPage'
+
+import AboutPage from './pages/AboutPage'
+import PrivacyPage from './pages/PrivacyPage'
+import FeedbackPage from './pages/FeedbackPage'
 
 function App() {
   // Which tab is currently open. Starts on the home page.
@@ -38,6 +45,15 @@ function App() {
     if (activeTab === 'timer') {
       return <TimerPage />
     }
+    if (activeTab === 'about') {
+      return <AboutPage />
+    }
+    if (activeTab === 'privacy') {
+      return <PrivacyPage />
+    }
+    if (activeTab === 'feedback') {
+      return <FeedbackPage />
+    }
 
     // Default to showing the home page
     return <HomePage onTabChange={setActiveTab} />
@@ -45,6 +61,8 @@ function App() {
 
   return (
     <div className="app">
+      <InfoMenu onTabChange={setActiveTab} />
+
       <header className="app-header">
         <h1 className="app-title">Pain Management</h1>
         <p className="app-subtitle">A space for living with chronic pain</p>

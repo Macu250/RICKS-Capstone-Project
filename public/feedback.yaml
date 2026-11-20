@@ -1,0 +1,17 @@
+
+page:
+  title: "Feedback"
+  description: "Have feedback or suggestions? Let us know how we can improve the app."
+
+sections:
+  - title: "General Feedback"
+    description: "We appreciate any feedback about your experience using the Pain Management app. If you have comments or suggestions, you can reach us at feedback@ricks.example.com."
+
+  - title: "Suggestions"
+    description: "Have an idea for a new feature or something that could make the app better? Send your suggestions to suggestions@ricks.example.com."
+
+  - title: "Report an Issue"
+    description: "If you notice something that is not working correctly, please let us know at support@ricks.example.com so we can look into the problem."
+
+  - title: "Contact Us"
+    description: "For any other questions or concerns about the app, you can contact our team at contact@ricks.example.com."
