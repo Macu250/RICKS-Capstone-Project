@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 import { execSync } from 'node:child_process'
 import yaml from 'js-yaml'
 
-// Check that the YAML files exist and can be read.
+// Check if the YAML files exist and can be read
 const pages = ['help', 'education', 'meditation', 'flexibility']
 
 for (const page of pages) {
@@ -16,7 +16,7 @@ for (const page of pages) {
   console.log(`${page}.yaml passed`)
 }
 
-// Check that the website builds without errors.
+// Check if the website builds without errors
 execSync('npm run build', { stdio: 'inherit' })
 
 console.log('All checks passed!')

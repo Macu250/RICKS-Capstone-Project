@@ -1,10 +1,12 @@
 page:
-  tilte: "Flexibility"
-  description: "different video playlists with flexibility videos."
+  title: "Flexibility"
+  description: "Gentle stretching playlists to ease tension."
 
 resources:
-# Repeat format as needed for as many resources you have.
-  - title: ""
-    description: ""
+# Repeat format as needed for as many playlists you have.
+# Use YouTube playlist embed URLs: https://www.youtube.com/embed/videoseries?list=PLAYLIST_ID
+# (PLAYLIST_ID is the part after "list=" in the playlist's normal YouTube link)
+  - title: "Flexibility"
+    description: "Gentle stretches to ease tension."
     type: "youtube"
-    url: ""
+    url: "https://www.youtube.com/embed/videoseries?list=PLJFfkBBPnZs0"

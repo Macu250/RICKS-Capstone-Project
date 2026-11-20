@@ -1,0 +1,17 @@
+/* Playlist cards are buttons, so make them look like the other cards */
+.playlist-card {
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.playlist-card p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Space between the Back button and the video */
+.playlist-player {
+  margin-top: 20px;
+}

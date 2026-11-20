@@ -1,26 +1,17 @@
 import { useEffect, useState } from 'react'
-import yaml from 'js-yaml'
+import loadYaml from '../data/loadYaml'
 
 function HelpPage() {
-  const [page, setPage] = useState({})
+  const [heading, setHeading] = useState({})
   const [resources, setResources] = useState([])
 
   useEffect(() => {
     async function loadHelp() {
       try {
-        // Read YAML from the public folder
-        const response = await fetch(`${import.meta.env.BASE_URL}help.yaml`)
-
-        if (!response.ok) {
-          throw new Error('Failed to load help yaml')
-        }
-
-        // Convert YAML to JS
-        const text = await response.text()
-        const data = yaml.load(text)
+        const data = await loadYaml('help.yaml')
 
         // Store data
-        setPage(data.page || {})
+        setHeading(data.page || {})
         setResources(data.resources || [])
       } catch (error) {
         console.error('Error loading help resources:', error)
@@ -33,8 +24,8 @@ function HelpPage() {
   return (
     <div>
       <div className="page-header">
-        <h2>{page.title || 'Help & Support'}</h2>
-        {page.description && <p>{page.description}</p>}
+        <h2>{heading.title || 'Help & Support'}</h2>
+        {heading.description && <p>{heading.description}</p>}
       </div>
 
       <div className="card-grid">
